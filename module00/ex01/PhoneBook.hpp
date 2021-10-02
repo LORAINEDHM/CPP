@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   myAwesomePhoneBook.hpp                             :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/30 17:07:51 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/02 00:37:49 by lduhamel         ###   ########.fr       */
+/*   Created: 2021/10/02 00:27:53 by lduhamel          #+#    #+#             */
+/*   Updated: 2021/10/02 00:49:15 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MY_AWESOME_PHONE_BOOK_H
-# define MY_AWESOME_PHONE_BOOK_H
+#ifndef PHONEBOOK_CLASS_H
+# define PHONEBOOK_CLASS_H
 
 #include <string>
+#include <iostream>
 
-class Search {
+class Phonebook {
 
-	public:
-	
-		Search();
-		~Search(void);
+    public:
+
+        string			firstName;
+		string			lastName;
+		string			nickname;
+		string			darkestSecrest;
+        unsigned int	phoneNumber;
+
+        Phonebook(void);
+        ~Phonebook(void);
+
 };
-
-class Add {
-
-}
-
-class Exit
 
 
 
