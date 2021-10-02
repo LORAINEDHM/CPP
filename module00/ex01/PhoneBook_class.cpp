@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook_class.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/02 00:27:53 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/02 00:49:15 by lduhamel         ###   ########.fr       */
+/*   Created: 2021/10/02 19:42:13 by lduhamel          #+#    #+#             */
+/*   Updated: 2021/10/02 19:43:48 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_H
-# define PHONEBOOK_CLASS_H
-
-#include <string>
 #include <iostream>
+#include "PhoneBook_class.hpp"
 
-class Phonebook {
+PhoneBook::PhoneBook(void) {
 
-    public:
+	std::cout << "PhoneBook constructor called" << std::endl;
+	return;
+}
 
-        string			firstName;
-		string			lastName;
-		string			nickname;
-		string			darkestSecrest;
-        unsigned int	phoneNumber;
+PhoneBook::~PhoneBook(void) {
 
-        Phonebook(void);
-        ~Phonebook(void);
-
-};
-
-
-
-#endif
+	std::cout << "PhoneBook destructor called" << std::endl;
+	return;
+}

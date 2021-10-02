@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   myAwesomePhoneBook.hpp                             :+:      :+:    :+:   */
+/*   PhoneBook_class.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/30 17:07:51 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/02 00:37:49 by lduhamel         ###   ########.fr       */
+/*   Created: 2021/10/02 00:27:53 by lduhamel          #+#    #+#             */
+/*   Updated: 2021/10/02 19:22:33 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MY_AWESOME_PHONE_BOOK_H
-# define MY_AWESOME_PHONE_BOOK_H
+#ifndef PHONEBOOK_CLASS_H
+# define PHONEBOOK_CLASS_H
 
 #include <string>
+#include <iostream>
+#include "Contact_class.hpp"
 
-class Search {
+class PhoneBook {
 
-	public:
-	
-		Search();
-		~Search(void);
+    public:
+
+        Contact contacts[8];
+        
+        PhoneBook(void);
+        ~PhoneBook(void);
 };
-
-class Add {
-
-}
-
-class Exit
 
 
 

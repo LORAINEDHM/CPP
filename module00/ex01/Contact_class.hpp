@@ -1,43 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   myAwesomePhoneBook.cpp                             :+:      :+:    :+:   */
+/*   Contact_class.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/30 17:14:40 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/02 00:54:28 by lduhamel         ###   ########.fr       */
+/*   Created: 2021/10/02 16:23:38 by lduhamel          #+#    #+#             */
+/*   Updated: 2021/10/03 00:03:09 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CONTACT_CLASS_H
+# define CONTACT_CLASS_H
+
+#include <string>
 #include <iostream>
-#include "myAwesomePhoneBook.hpp"
-#include "PhoneBook.hpp"
 
-Contact::Contact(void) {
+class Contact {
 
-	std::cout << "Constructor called" << std::endl;
-	return;
-}
+    public:
 
-Contact::~Contact(void) {
+        char            index[2];
+        char			firstName[30];
+		char			lastName[30];
+		char			nickname[30];
+		char			darkestSecret[30];
+        char            phoneNumber[30];
 
-	std::cout << "Destructor called" << std::endl;
-	return;
-}
+        Contact(void);
+        ~Contact(void);
+        void    askDetails(void);
 
+};
 
-
-
-Search::Search() {
-
-	std::cout << "Constructor called" << std::endl;
-	return;
-}
-
-Search::~Search() {
-
-	std::cout << "Destructor called" << std::endl;
-	return;
-}
-
+#endif
