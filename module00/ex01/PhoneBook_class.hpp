@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 00:27:53 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 09:30:26 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/03 11:21:29 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,13 @@ class PhoneBook {
         PhoneBook(void);
         ~PhoneBook(void);
 
-        void	addContact(void);
+		void	addContact(void);
         void	searchContact(void);
-		void	printDetails(void);
-		void	printDetail(std::string detail);
+	
+	private:
+
+		void	_printDetails(void);
+		void	_printDetail(std::string detail);
 };
 
 

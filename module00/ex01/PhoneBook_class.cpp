@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 19:42:13 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 10:52:47 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/03 11:22:11 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	PhoneBook::addContact() {
 		this->contacts[this->nb].askDetails();
 		this->nb++;
 	}
+	return;
 }
 
 void	PhoneBook::searchContact(void) {
@@ -44,7 +45,7 @@ void	PhoneBook::searchContact(void) {
 	if (this->nb == 0)
 		std::cout << "PhoneBook is empty" << std::endl;
 	else {
-		printDetails();
+		_printDetails();
 		std::cout << "Details from which index do you want to see ?" << std::endl;
 		std::cin >> index;
 				
@@ -56,9 +57,10 @@ void	PhoneBook::searchContact(void) {
 		}
 		std::cout << "Index doesn't exists yet" << std::endl;
 	}
+	return;
 }
 
-void	PhoneBook::printDetail(std::string detail) {
+void	PhoneBook::_printDetail(std::string detail) {
 	
 	std::cout << std::setw(10);
 	if (detail.length() > 10)
@@ -67,20 +69,22 @@ void	PhoneBook::printDetail(std::string detail) {
 		detail.resize(10, '.');
 	}
 	std::cout << detail;
+	return;
 }
 
-void	PhoneBook::printDetails() {
+void	PhoneBook::_printDetails() {
 	
 	for (int i = 0; i < this->nb; i++) {
 		std::cout << "|";
-		printDetail(this->contacts[i].index);
+		_printDetail(this->contacts[i].index);
 		std::cout << "|";
-		printDetail(this->contacts[i].firstName);
+		_printDetail(this->contacts[i].firstName);
 		std::cout << "|";
-		printDetail(this->contacts[i].lastName);
+		_printDetail(this->contacts[i].lastName);
 		std::cout << "|";
-		printDetail(this->contacts[i].nickname);
+		_printDetail(this->contacts[i].nickname);
 		std::cout << "|";
 		std::cout << std::endl;
 	}
+	return;
 }
