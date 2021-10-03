@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 13:27:42 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 10:36:31 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/03 10:45:39 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		main(void) {
 	phonebook.nb = 0;
     while (phonebook.nb >= 0)
     {
-        std::cout << "Enter ADD, SEARCH or EXIT" << std::endl;
+        std::cout << "Enter one of the following commands :\n- ADD\n- SEARCH \n- EXIT" << std::endl;
         std::cin >> cmd;
         std::cout << cmd << std::endl;
         if (std::strcmp(cmd, "ADD") == 0)
@@ -30,6 +30,6 @@ int		main(void) {
         else if (std::strcmp(cmd, "SEARCH") == 0)
 				phonebook.searchContact();
         else if (std::strcmp(cmd, "EXIT") == 0)
-            std::cout << "Go to EXIT function" << std::endl;
+            exit (0);
     }
 }

@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 19:42:13 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 10:34:13 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/03 10:52:47 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,17 @@ void	PhoneBook::addContact() {
 	else {
 		this->contacts[this->nb].index.push_back((this->nb + 1) + '0');
 		this->contacts[this->nb].askDetails();
+		this->nb++;
 	}
-	this->nb++;
 }
 
 void	PhoneBook::searchContact(void) {
 
 	std::string index;
 	
-	if (this->nb > 0) {
+	if (this->nb == 0)
+		std::cout << "PhoneBook is empty" << std::endl;
+	else {
 		printDetails();
 		std::cout << "Details from which index do you want to see ?" << std::endl;
 		std::cin >> index;
