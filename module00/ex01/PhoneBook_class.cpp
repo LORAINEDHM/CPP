@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 19:42:13 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 11:22:11 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/03 18:02:46 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ PhoneBook::PhoneBook(void) {
 PhoneBook::~PhoneBook(void) {
 
 	std::cout << "PhoneBook destructor called" << std::endl;
-	return;
 }
 
 void	PhoneBook::addContact() {

@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 00:27:53 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 11:21:29 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/03 17:29:51 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class PhoneBook {
         int     nb;
         
         PhoneBook(void);
-        ~PhoneBook(void);
+        ~PhoneBook();
 
 		void	addContact(void);
         void	searchContact(void);
