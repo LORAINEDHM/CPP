@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 18:52:43 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 20:07:44 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/04 10:32:26 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ public:
 	static void	displayAccountsInfos( void );
 
 	Account( int initial_deposit );
-    //Account( void );
 	~Account( void );
 
 	void	makeDeposit( int deposit );
@@ -55,7 +54,7 @@ private:
 	int				_nbDeposits;
 	int				_nbWithdrawals;
 
-//	Account( void );
+	Account( void );
 
 };
 

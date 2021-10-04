@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 18:56:26 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 23:40:05 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/04 11:48:10 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	Account::_displayTimestamp( void )
 	std::time_t time;
 
 	time = std::time(nullptr);
-	std::cout << "[" << std::put_time(std::localtime(&time), "%y%m%d_%OH%OM%OS") << "] ";
+	std::cout << "[" << std::put_time(std::localtime(&time), "%Y%m%d_%OH%OM%OS") << "] ";
 }
 
 int	Account::getNbAccounts( void ) {
@@ -85,7 +85,7 @@ void	Account::makeDeposit( int deposit ) {
 			<< ";deposit:" << deposit;
 	this->_amount += deposit;
 	std::cout << ";amont:" << this->_amount
-			<< "nb_deposits:1" << std::endl;
+			<< ";nb_deposits:1" << std::endl;
 	Account::_totalAmount += deposit;
 	this->_nbDeposits++;
 	Account::_totalNbDeposits++;
