@@ -6,7 +6,7 @@
 #    By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/04 11:59:02 by lduhamel          #+#    #+#              #
-#    Updated: 2021/10/04 16:51:32 by lduhamel         ###   ########.fr        #
+#    Updated: 2021/10/05 10:30:21 by lduhamel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC = clang++
 
 CFLAGS  = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Zombie.cpp newZombie.cpp
+SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

@@ -6,19 +6,21 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 11:59:48 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/04 18:04:05 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/05 10:43:55 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int		main(int argc, char **argv) {
+int		main( void ) {
 	
-	Zombie zombie1("lolo");
-	Zombie zombie2("Mark");
+	Zombie Lolo("lolo");
+	Zombie Mark("Mark");
 
-	Zombie* zombie3 = zombie3->newZombie("Elisa");
-	//Zombie zombie4("Franckie");
-	//zombie4.randomChump("Franckie");
+	Mark.announce();
+
+	Zombie* Elisa = newZombie("Elisa");
 	randomChump("Franckie");
+	delete Elisa;
+	return (0);
 }

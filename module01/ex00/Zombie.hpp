@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:02:17 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/04 18:03:55 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/05 10:41:51 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ class Zombie {
 		~Zombie( void );
 
 		void	announce( void ) const;
-		Zombie* newZombie( std::string name );
 
 };
 
+Zombie* newZombie( std::string name );
 void	randomChump( std::string name );
+
