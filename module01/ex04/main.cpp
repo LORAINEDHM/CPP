@@ -6,13 +6,14 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:11:04 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/05 18:07:36 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/06 14:42:09 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Replace.hpp"
+#include <iostream>
+#include <fstream>
 
-int		handleError(const char *str) {
+int		handleError( const char *str ) {
 	
 	std::cout << "Error : " << str << std::endl;
 	return (0);
@@ -21,17 +22,58 @@ int		handleError(const char *str) {
 int		parsing( int ac, char **av ) {
 
 	if (ac != 4)
-		return(handleError("wrong number of arguments"));
-	std::ifstream ifs(av[1]);
-	ifs << "hello";
+		return(handleError("wrong number of arguments"));	
 	return (1);
+}
+
+void	fillFile( std::string filename, std::string s1, std::string s2, std::ifstream& ifs ) {
+	
+	std::ofstream ofs(filename);
+	std::string line;
+	int pos;
+
+	if (!ofs) {
+    	std::cerr << "Error: file could not be opened" << std::endl;
+    	exit(1);
+	}
+	while (getline(ifs, line)) {
+		if ((pos = line.find(s1)) != std::string::npos) {	
+			line.erase(pos, s1.length());
+			line.insert(pos, s2);
+		}
+		ofs << line << std::endl;
+	}
+	ifs.close();
+	ofs.close();
+}
+
+std::string		getFilename( std::string filename ) {
+
+	size_t pos = 0;
+	size_t len;
+	
+	len = filename.length();
+	if ( (pos = filename.find(".")) == std::string::npos)
+		pos = len;
+	if (pos != std::string::npos)
+		filename.resize(pos);
+	filename.resize(pos);
+	return (filename.append(".replace"));
 }
 
 int main (int ac, char **av) {
 
+	std::string filename;
+	std::string word;
+	
 	if (parsing(ac, av ) == 0)
 		return (1);
-//	if ()
-
-	return (0);
+	std::ifstream ifs(av[1]);
+	if (!ifs) {
+    	std::cerr << "Error: file could not be opened" << std::endl;
+    	exit(1);
+	}
+	filename = getFilename(av[1]);
+	fillFile(filename, av[2], av[3], ifs);
+	return 0;
 }
