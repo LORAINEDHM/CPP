@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:11:04 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/06 14:42:09 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/06 14:51:52 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 
 int		handleError( const char *str ) {
 	
-	std::cout << "Error : " << str << std::endl;
+	std::cout << str << std::endl;
 	return (0);
 }
 
 int		parsing( int ac, char **av ) {
 
 	if (ac != 4)
-		return(handleError("wrong number of arguments"));	
+		return(handleError("Error: wrong number of arguments"));	
 	return (1);
 }
 
@@ -31,17 +31,21 @@ void	fillFile( std::string filename, std::string s1, std::string s2, std::ifstre
 	std::ofstream ofs(filename);
 	std::string line;
 	int pos;
+	int i = 0;
 
 	if (!ofs) {
     	std::cerr << "Error: file could not be opened" << std::endl;
     	exit(1);
 	}
 	while (getline(ifs, line)) {
+		if (i != 0)
+			ofs << std::endl;
 		if ((pos = line.find(s1)) != std::string::npos) {	
 			line.erase(pos, s1.length());
 			line.insert(pos, s2);
 		}
-		ofs << line << std::endl;
+		ofs << line;
+		i++;
 	}
 	ifs.close();
 	ofs.close();
