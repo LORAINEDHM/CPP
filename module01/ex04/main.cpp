@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:11:04 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/06 19:01:24 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/08 16:38:48 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,34 +42,11 @@ void	fillFile( std::string filename, std::string s1, std::string s2, std::ifstre
 	str = std::string((std::istreambuf_iterator<char>(ifs)), std::istreambuf_iterator<char>());
 	pos = str.find(s1);
 	while (pos != std::string::npos) {
-		std::cout << pos << std::endl;
 		str.erase(pos, s1.length());
 		str.insert(pos, s2);
-		std::cout << pos << std::endl;
-		pos = (&str[pos + s1.length()]).find(s1);
-		std::cout << pos << std::endl;
-		break;
-
-		//ofs << str << std::endl;
+		pos = str.find(s1, pos + (s1.length()));
 	}
 	ofs << str;
-
-	// while (getline(ofs, line)) {
-	// 	// endflag = 0;
-	// 	// if (i != 0)
-	// 	// 	ofs << std::endl;
-	// 	if ((pos = line.find(s1)) != std::string::npos) {
-	// 		s1len = s1.length();
-	// 		// if (line[pos + s1len] == '\n')
-	// 		// 	endflag = 1;
-	// 		line.erase(pos, s1len);
-	// 		line.insert(pos, s2);
-	// 	}
-	// 	ofs << line << std::endl;
-	// 	i++;
-	// }
-	// if ( endflag == 1)
-	// 	ofs << std::endl;
 	ifs.close();
 	ofs.close();
 }
