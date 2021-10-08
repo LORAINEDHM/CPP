@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 16:23:38 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 18:01:41 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/04 11:26:25 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Contact {
 		Contact(void);
 		~Contact(void);
 		void    askDetails(void);
+		void	print_each_detail(void) const;
 
 };
 

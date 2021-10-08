@@ -6,27 +6,31 @@
 #    By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/02 13:24:27 by lduhamel          #+#    #+#              #
-#    Updated: 2021/10/02 19:45:07 by lduhamel         ###   ########.fr        #
+#    Updated: 2021/10/04 11:31:50 by lduhamel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+
+NAME = phonebook
 CC = clang++
 
-CFLAGS  = -Wall -Wextra -Werror
+CFLAGS  = -Wall -Wextra -Werror -std=c++98
 
-TARGET = phonebook
+SRCS = main.cpp Contact_class.cpp PhoneBook_class.cpp
 
-phonebook: main.o Contact_class.o PhoneBook_class.o
-	$(CC) $(CFLAGS) main.o Contact_class.o PhoneBook_class.o -o phonebook
+OBJS = ${SRCS:.cpp=.o}
 
-main.o: main.cpp
-	$(CC) $(CFLAGS) -c main.cpp
+all : $(NAME)
 
-Contact_class.o: Contact_class.cpp
-	$(CC) $(CFLAGS) -c Contact_class.cpp
+$(NAME) : $(OBJS)
 
-PhoneBook_class.o: PhoneBook_class.cpp
-	$(CC) $(CFLAGS) -c PhoneBook_class.cpp
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	rm -rf *.o phonebook
+	rm -rf $(OBJS)
+
+fclean: clean
+	rm -rf $(NAME)
+
+re : fclean all

@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/30 15:37:34 by lduhamel          #+#    #+#              #
-#    Updated: 2021/10/04 11:35:33 by lduhamel         ###   ########.fr        #
+#    Created: 2021/10/06 15:35:45 by lduhamel          #+#    #+#              #
+#    Updated: 2021/10/06 15:35:58 by lduhamel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = ex04
 CC = clang++
 
 CFLAGS  = -Wall -Wextra -Werror -std=c++98
 
-SRCS = megaphone.cpp
+SRCS = main.cpp Karen.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
@@ -30,6 +30,6 @@ clean:
 	rm -rf $(OBJS)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) *.replace
 
 re : fclean all

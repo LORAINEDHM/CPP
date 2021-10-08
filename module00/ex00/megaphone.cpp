@@ -6,14 +6,11 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 15:20:11 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/09/30 16:20:25 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/04 12:00:42 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string.h>
-
-
 
 int		main(int ac, char **av) {	
 	if (ac < 2)
@@ -29,4 +26,5 @@ int		main(int ac, char **av) {
 				std::cout << std::endl;
 		}
 	}
+	return (0);
 }

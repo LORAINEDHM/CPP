@@ -6,11 +6,11 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 13:27:42 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 18:09:25 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/08 16:44:32 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+//#include <iostream>
 #include "Contact_class.hpp"
 #include "PhoneBook_class.hpp"
 
@@ -28,7 +28,11 @@ int		main(void) {
 			phonebook.addContact();
 		else if (cmd.compare("SEARCH") == 0)
 				phonebook.searchContact();
-		else if (cmd.compare("EXIT") == 0)
+		else if (cmd.compare("EXIT") == 0) {
+			std::cout << "Goodbye!" << std::endl;
             break;
+		}
+		else
+			std::cout << "Command not found. Try again" << std::endl;
     }
 }

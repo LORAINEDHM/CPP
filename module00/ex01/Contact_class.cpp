@@ -6,11 +6,10 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 16:48:24 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 18:01:34 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/04 11:34:29 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Contact_class.hpp"
 
 Contact::Contact(void) {
@@ -36,4 +35,12 @@ void    Contact::askDetails(void) {
     std::cout << "What is the phone number ?" << std::endl;
     std::cin >> this->phoneNumber;
     return;
+}
+
+void	Contact::print_each_detail(void) const {
+	std::cout << "First name : " << this->firstName << std::endl
+		<< "Last name : " << this->lastName << std::endl
+		<< "Nickname : " << this->nickname << std::endl
+		<< "Darkest secret : " << this->darkestSecret << std::endl
+		<< "Phone number : " << this->phoneNumber << std::endl;
 }

@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook_class.hpp                                :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/02 00:27:53 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/04 11:33:41 by lduhamel         ###   ########.fr       */
+/*   Created: 2021/10/06 15:36:15 by lduhamel          #+#    #+#             */
+/*   Updated: 2021/10/06 16:04:34 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_H
-# define PHONEBOOK_CLASS_H
+#ifndef KAREN_HPP
+#define KAREN_HPP
 
-#include <iomanip>
 #include <iostream>
-#include "Contact_class.hpp"
 
-class PhoneBook {
 
-    public:
+class	Karen {
 
-        Contact contacts[8];
-        int     nb;
-        
-        PhoneBook(void);
-        ~PhoneBook();
-
-		void	addContact(void);
-        void	searchContact(void);
-	
 	private:
 
-		void	_printDetails(void);
-		void	_printDetail(std::string detail);
-};
+		void	_debug( void );
+		void	_info( void );
+		void	_warning( void );
+		void	_error( void );
+
+	public:
+
+		Karen( void );
+		~Karen( void );
+		void	complain( std::string level );
+}
 
 
 

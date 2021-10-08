@@ -6,12 +6,11 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 19:42:13 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/03 18:02:46 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/04 11:33:52 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <iomanip>
+//#include <iostream>
 #include "PhoneBook_class.hpp"
 
 PhoneBook::PhoneBook(void) {
@@ -45,16 +44,15 @@ void	PhoneBook::searchContact(void) {
 		std::cout << "PhoneBook is empty" << std::endl;
 	else {
 		_printDetails();
-		std::cout << "Details from which index do you want to see ?" << std::endl;
-		std::cin >> index;
-				
+		std::cout << "Details from which contact do you want to see ? (enter the index)" << std::endl;
+		std::cin >> index;		
 		for (int i = 0; i < this->nb; i++) {
 			if (index.compare(this->contacts[i].index) == 0) {
-				std::cout << this->contacts[i].phoneNumber << std::endl;
+				this->contacts[i].print_each_detail();
 				return;
 			}
 		}
-		std::cout << "Index doesn't exists yet" << std::endl;
+		std::cout << "Contact doesn't exist" << std::endl;
 	}
 	return;
 }
