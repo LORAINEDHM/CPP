@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 15:36:15 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/06 16:04:34 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/12 10:51:00 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class	Karen {
 		Karen( void );
 		~Karen( void );
 		void	complain( std::string level );
-}
+};
 
 
 

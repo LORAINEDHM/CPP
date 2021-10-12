@@ -6,11 +6,11 @@
 #    By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 15:35:45 by lduhamel          #+#    #+#              #
-#    Updated: 2021/10/06 15:35:58 by lduhamel         ###   ########.fr        #
+#    Updated: 2021/10/09 17:13:00 by lduhamel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex04
+NAME = ex05
 CC = clang++
 
 CFLAGS  = -Wall -Wextra -Werror -std=c++98
