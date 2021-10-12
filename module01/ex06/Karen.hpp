@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 15:36:01 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/12 11:55:19 by lduhamel         ###   ########.fr       */
+/*   Created: 2021/10/06 15:36:15 by lduhamel          #+#    #+#             */
+/*   Updated: 2021/10/12 11:54:27 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#ifndef KAREN_HPP
+#define KAREN_HPP
 
-int main( void ) {
+#include <iostream>
 
-	Karen test;
 
-	std::cout << "********** level is debug *********\n";
-	test.complain("DEBUG");
-	std::cout << "********** level is error *********\n";
-	test.complain("ERROR");
-	std::cout << "********** level is warning *********\n";
-	test.complain("WARNING");
-	std::cout << "********** level is info *********\n";
-	test.complain("INFO");
-}
+class	Karen {
+
+	private:
+
+		void	_debug( void );
+		void	_info( void );
+		void	_warning( void );
+		void	_error( void );
+
+	public:
+
+		Karen( void );
+		~Karen( void );
+		void	filter( int index );
+};
+
+
+
+#endif

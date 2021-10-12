@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:11:04 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/08 16:38:48 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/12 11:56:02 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <fstream>
 #include <streambuf>
 #include <string>
-//#include <sstream>
 
 int		handleError( const char *str ) {
 	
