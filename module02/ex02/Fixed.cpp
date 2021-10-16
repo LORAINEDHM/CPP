@@ -6,7 +6,7 @@
 /*   By: lduhamel <lduhamel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 17:04:23 by lduhamel          #+#    #+#             */
-/*   Updated: 2021/10/14 18:12:50 by lduhamel         ###   ########.fr       */
+/*   Updated: 2021/10/16 00:31:54 by lduhamel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,20 @@ std::ostream & operator<<( std::ostream &o, Fixed const & rhs ) {
 
 Fixed		Fixed::operator+( const Fixed& rhs) const {
 
-	return Fixed(this->_fixedNb + rhs._fixedNb);
+	Fixed val(*this);
+	(void) rhs;
+	val.setRawBits((this->_fixedNb + 2));
+	return (val);
 }
 
 Fixed		Fixed::operator-( const Fixed& rhs) const {
 
 	return Fixed(this->_fixedNb - rhs._fixedNb);
+}
+
+Fixed		Fixed::operator/( const Fixed& rhs) const {
+	
+    return Fixed(this->_fixedNb / rhs._fixedNb);
 }
 
 
